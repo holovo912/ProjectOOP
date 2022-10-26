@@ -8,7 +8,7 @@ namespace OOP_CSharp
 {
     internal class Program
     {
-        //Test
+        //Test code
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!!!");
