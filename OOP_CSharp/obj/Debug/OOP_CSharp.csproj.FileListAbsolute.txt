@@ -1,0 +1,8 @@
+C:\Users\LongVu\Documents\GitHub\ProjectOOP\OOP_CSharp\bin\Debug\OOP_CSharp.exe.config
+C:\Users\LongVu\Documents\GitHub\ProjectOOP\OOP_CSharp\bin\Debug\OOP_CSharp.exe
+C:\Users\LongVu\Documents\GitHub\ProjectOOP\OOP_CSharp\bin\Debug\OOP_CSharp.pdb
+C:\Users\LongVu\Documents\GitHub\ProjectOOP\OOP_CSharp\obj\Debug\OOP_CSharp.csproj.AssemblyReference.cache
+C:\Users\LongVu\Documents\GitHub\ProjectOOP\OOP_CSharp\obj\Debug\OOP_CSharp.csproj.SuggestedBindingRedirects.cache
+C:\Users\LongVu\Documents\GitHub\ProjectOOP\OOP_CSharp\obj\Debug\OOP_CSharp.csproj.CoreCompileInputs.cache
+C:\Users\LongVu\Documents\GitHub\ProjectOOP\OOP_CSharp\obj\Debug\OOP_CSharp.exe
+C:\Users\LongVu\Documents\GitHub\ProjectOOP\OOP_CSharp\obj\Debug\OOP_CSharp.pdb
