@@ -8,7 +8,7 @@ namespace OOP_CSharp
 {
     internal class Program
     {
-        //Kiểm tra 1:40PM
+        //Kiểm tra 3:30PM
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!!!");
