@@ -8,10 +8,10 @@ namespace OOP_CSharp
 {
     internal class Program
     {
-        //Kiểm tra 3:30PM
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!!!");
+            Phim p1 = new Phim();
+            p1.Nhap();
         }
     }
 }
