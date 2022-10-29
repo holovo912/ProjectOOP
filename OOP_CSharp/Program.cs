@@ -8,6 +8,7 @@ namespace OOP_CSharp
 {
     internal class Program
     {
+        // Kiểm tra 1:22PM
         static void Main(string[] args)
         {
             Phim p1 = new Phim();
