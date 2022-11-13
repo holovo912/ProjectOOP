@@ -15,35 +15,28 @@
     </TypeIdentifier>
   </Class>
   <Class Name="OOP_CSharp.Drama">
-    <Position X="9.5" Y="5.25" Width="1.5" />
+    <Position X="11.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Drama.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="OOP_CSharp.Action">
-    <Position X="4.25" Y="5.25" Width="1.5" />
+    <Position X="6.25" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
       <FileName>Action.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="OOP_CSharp.Romantic">
-    <Position X="11.25" Y="5.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Romantic.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="OOP_CSharp.Comedy">
-    <Position X="6" Y="5.25" Width="1.5" />
+    <Position X="8" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Comedy.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="OOP_CSharp.Cartoon">
-    <Position X="7.75" Y="5.25" Width="1.5" />
+    <Position X="9.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Cartoon.cs</FileName>
@@ -82,6 +75,27 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>NOR_KH.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_CSharp.Adult">
+    <Position X="4.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Adult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_CSharp.Cinema">
+    <Position X="2.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cinema.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_CSharp.Phong">
+    <Position X="10.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Phong.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

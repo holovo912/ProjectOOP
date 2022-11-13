@@ -5,7 +5,7 @@ using System.Text;
 
 namespace OOP_CSharp
 {
-    public class Romantic : Phim
+    public class Cinema
     {
     }
 }
