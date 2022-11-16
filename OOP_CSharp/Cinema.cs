@@ -53,6 +53,7 @@ namespace OOP_CSharp
                 DsVIP.Add(t);
             }
         }
+        //a
         public void showPhim(int key)
         {
             DsPhim.Show();
