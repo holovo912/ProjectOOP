@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OOP_CSharp.Phim">
+    <Position X="8.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQACAAEEAoABDAAAAAAAAAAAAAAAAABAAAAAQAAAA=</HashCode>
+      <FileName>Phim.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_CSharp.Program" Collapsed="true">
+    <Position X="14.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_CSharp.Drama">
+    <Position X="9.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Drama.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_CSharp.Action">
+    <Position X="6.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Action.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_CSharp.Cartoon">
+    <Position X="8" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cartoon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_CSharp.DanhSachPhim">
+    <Position X="14" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAAAADAAAgAAAAAAAAAAAAAAAQQAAgAMAAIAAAAAAAA=</HashCode>
+      <FileName>DanhSachPhim.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_CSharp.Horror">
+    <Position X="11.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Horror.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_CSharp.KH">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAgAAJAIAAAQAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>KH.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_CSharp.VIP_KH">
+    <Position X="4.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>VIP_KH.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_CSharp.NOR_KH">
+    <Position X="6.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NOR_KH.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_CSharp.Cinema">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAgAUBAIAABAAAAAQAAAgAQAAEAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Cinema.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_CSharp.Phong">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAQAAAAAAAAAAgAAAAAgAAAAIAAAAAAAA=</HashCode>
+      <FileName>Phong.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

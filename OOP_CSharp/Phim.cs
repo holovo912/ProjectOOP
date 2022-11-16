@@ -14,11 +14,20 @@ namespace OOP_CSharp
         private int phut;
         private int giave;
         private int tag;
-        private int gioihan;
-
-        public void CheckTuoi(int tuoi)
+        public Phim()
         {
-            throw new System.NotImplementedException();
         }
+        public string IdPhim { get => idphim; set => idphim = value; }
+        public string TenPhim { get => tenphim; set => tenphim = value; }
+        public int Gio { get => gio; set => gio = value; }
+        public int Phut { get => phut; set => phut = value; }
+        public int GiaVe { get => giave; set => giave = value; }
+        public int Tag { get => tag; set => tag = value; }
+
+        public virtual bool CheckTuoi(KH temp)
+        {
+            return true;
+        }
+        ~Phim() { }
     }
 }

@@ -45,19 +45,21 @@
   <ItemGroup>
     <Compile Include="Action.cs" />
     <Compile Include="Cartoon.cs" />
-    <Compile Include="Comedy.cs" />
+    <Compile Include="Cinema.cs" />
+    <Compile Include="DanhSachPhim.cs" />
     <Compile Include="Drama.cs" />
-    <Compile Include="HanhDong.cs" />
-    <Compile Include="KinhDi.cs" />
+    <Compile Include="Horror.cs" />
+    <Compile Include="KH.cs" />
+    <Compile Include="NOR_KH.cs" />
     <Compile Include="Phim.cs" />
-    <Compile Include="KhachHang.cs" />
+    <Compile Include="Phong.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Romantic.cs" />
+    <Compile Include="VIP_KH.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
