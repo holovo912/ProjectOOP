@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace OOP_CSharp
 {
@@ -17,8 +18,11 @@ namespace OOP_CSharp
         }
         public void LayThongTin()
         {
-            Console.WriteLine("OK VIP");
+            FileStream fs = new FileStream("C:\\Users\\QuangTrieu's PC\\OneDrive\\Documents\\GitHub\\ProjectOOP\\VIP.txt", FileMode.Open);
+            StreamReader rd = new StreamReader(fs, Encoding.UTF8);
+            this.IdVIP = rd.ReadToEnd();
         }
+      
         ~VIP_KH() { }
     }
 }
