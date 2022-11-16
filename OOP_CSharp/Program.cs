@@ -10,7 +10,9 @@ namespace OOP_CSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!!!");
+            Cinema UTE = new Cinema();
+            UTE.Nhap();
+            UTE.Run();
         }
     }
 }
