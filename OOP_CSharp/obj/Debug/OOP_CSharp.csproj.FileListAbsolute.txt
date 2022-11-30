@@ -22,3 +22,8 @@ D:\ProjectOOP\OOP_CSharp\obj\Debug\OOP_CSharp.csproj.SuggestedBindingRedirects.c
 D:\ProjectOOP\OOP_CSharp\obj\Debug\OOP_CSharp.csproj.CoreCompileInputs.cache
 D:\ProjectOOP\OOP_CSharp\obj\Debug\OOP_CSharp.exe
 D:\ProjectOOP\OOP_CSharp\obj\Debug\OOP_CSharp.pdb
+C:\Users\QuangTrieu's PC\OneDrive\Documents\GitHub\ProjectOOP\ProjectOOP\OOP_CSharp\obj\Debug\OOP_CSharp.csproj.AssemblyReference.cache
+C:\Users\QuangTrieu's PC\OneDrive\Documents\GitHub\ProjectOOP\ProjectOOP\OOP_CSharp\obj\Debug\OOP_CSharp.csproj.SuggestedBindingRedirects.cache
+C:\Users\QuangTrieu's PC\OneDrive\Documents\GitHub\ProjectOOP\ProjectOOP\OOP_CSharp\obj\Debug\OOP_CSharp.csproj.CoreCompileInputs.cache
+C:\Users\QuangTrieu's PC\OneDrive\Documents\GitHub\ProjectOOP\ProjectOOP\OOP_CSharp\obj\Debug\OOP_CSharp.exe
+C:\Users\QuangTrieu's PC\OneDrive\Documents\GitHub\ProjectOOP\ProjectOOP\OOP_CSharp\obj\Debug\OOP_CSharp.pdb

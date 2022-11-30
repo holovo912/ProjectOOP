@@ -9,13 +9,36 @@ namespace OOP_CSharp
     {
         public Drama() : base()
         { }
-        public override bool CheckTuoi(KH temp)
+        public Drama(string tenphim, int gio, int gio_end, int phut, int phut_end,  List<int> ChoNgoi) : base(tenphim, gio, gio_end, phut, phut_end, ChoNgoi)
         {
-            Tag = 3;
-            GiaVe = 60000;
-            if (temp.Tuoi < 14)
+
+        }
+
+        ~Drama() { }
+
+        public override void Input(string tenphim, int gio, int gio_end, int phut, int phut_end, List<int> ChoNgoi)
+        {
+            base.Input();
+            this.giave = 60000;
+            this.tag = 3;
+            this.phong = 3;
+        }
+
+        public override bool CheckTuoi(int tuoi)
+        {
+            if (tuoi < 14)
                 return false;
             return true;
+        }
+
+        public override void Infor()
+        {
+            base.Infor();
+        }
+
+        public override void Seat()
+        {
+            base.Seat();
         }
         ~Drama() { }
     }
