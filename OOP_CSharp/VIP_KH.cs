@@ -14,7 +14,7 @@ namespace OOP_CSharp
             this.tuoi = tuoi;
             this.giamgia = 0.2;
         }
-        public void CheckID(string idvip)
+        public bool CheckID(string idvip)
         {
             if(idvip == this.ID)
             {
@@ -22,7 +22,7 @@ namespace OOP_CSharp
             }
             return false;
         }
-        public override void Infor()
+        public override void Info()
         {
             Console.WriteLine("------------------------------------------------");
             Console.WriteLine("ID: " + this.ID);

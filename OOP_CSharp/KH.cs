@@ -23,13 +23,13 @@ namespace OOP_CSharp
             
         }
 
-        virtual void Info()
+        public virtual void Info()
         {
 
         }
-        virtual double Discount()
+        public virtual double Discount()
         {
-        
+            return this.giamgia;
         }
     }
 }

@@ -12,9 +12,6 @@ namespace OOP_CSharp
 
         static void Main(string[] args)
         {
-            Cinema UTE = new Cinema();
-            UTE.Nhap();
-            UTE.Run();
         }
     }
 }

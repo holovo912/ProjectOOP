@@ -9,7 +9,7 @@ namespace OOP_CSharp
 {
     public static class Cinema
     {
-        protected DanhSachPhim dsphim;
+        protected List<Phim> dsphim;
         protected int num_phim = num_action + num_cartoon + num_drama + num_horror;;
         protected List<VIP_KH> dsvip = new List<VIP_KH>();
         protected int num_vip = 5;
@@ -23,12 +23,6 @@ namespace OOP_CSharp
         protected num_horror = 2;
 
 
-        public Cinema()
-        {
-            DanhSachPhim DsPhim = new DanhSachPhim();
-            List<Phong> DsPhong = new List<Phong>();
-            List<VIP_KH> DsVIP = new List<VIP_KH>();
-        }
         // Lấy thông tin từ file
         public static void LayThongTinVip()
         {

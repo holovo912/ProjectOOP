@@ -16,7 +16,7 @@ namespace OOP_CSharp
             this.giamgia = 0.1;
         }
 
-        public override void Infor()
+        public override void Info()
         {
             Console.WriteLine("------------------------------------------------");
             Console.WriteLine("ID: " + this.ID);
