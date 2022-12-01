@@ -10,30 +10,54 @@ namespace OOP_CSharp
 {
     public class Phim
     {
-        protected string tenphim;
-        protected int gio;
-        protected int gio_end;
-        protected int phut;
-        protected int phut_end;
-        protected int giave;
-        protected int tag;
-        protected int phong;
-        protected List<int> ChoNgoi;
+        private string tenphim;
+        private int gio;
+        private int gio_end;
+        private int phut;
+        private int phut_end;
+        private int giave;
+        private int tag;
+        private int phong;
+        private List<int> choNgoi;
+        private string tag_name;
+
+        public string Tenphim { get => tenphim; set => tenphim = value; }
+        public int Gio { get => gio; set => gio = value; }
+        public int Gio_end { get => gio_end; set => gio_end = value; }
+        public int Phut { get => phut; set => phut = value; }
+        public int Phut_end { get => phut_end; set => phut_end = value; }
+        public int Giave { get => giave; set => giave = value; }
+        public int Tag { get => tag; set => tag = value; }
+        public int Phong { get => phong; set => phong = value; }
+        public List<int> ChoNgoi { get => choNgoi; set => choNgoi = value; }
+        public string Tag_name { get => tag_name; set => tag_name = value; }
+
         public Phim()
         {
-        
+
+        }
+
+        public Phim(string tenphim, int gio, int gio_end, int phut, int phut_end, List<int> choNgoi, string tag_name)
+        {
+            this.Tenphim = tenphim;
+            this.Gio = gio;
+            this.Gio_end = gio_end;
+            this.Phut = phut;
+            this.Phut_end = phut_end;
+            this.ChoNgoi = choNgoi;
+            this.Tag_name = tag_name;
         }
 
         ~Phim() { }
 
 
-        public virtual void Input(string tenphim, int gio, int gio_end, int phut, int phut_end,  List<int> ChoNgoi)
+        public virtual void Input(string tenphim, int gio, int gio_end, int phut, int phut_end, List<int> ChoNgoi)
         {
-            this.tenphim = tenphim;
-            this.gio = gio;
-            this.phut = phut;
-            this.phut_end = phut_end;
-            this.gio_end = gio_end;
+            this.Tenphim = tenphim;
+            this.Gio = gio;
+            this.Phut = phut;
+            this.Phut_end = phut_end;
+            this.Gio_end = gio_end;
             this.ChoNgoi = ChoNgoi;
         }
 
@@ -42,39 +66,39 @@ namespace OOP_CSharp
             return true;
         }
 
-        public void Infor()
-        {
-            string tag_name;
-            if (this.tag == 1)
-			    tag_name = "Action";
-		    if (this.tag == 2)
-			    tag_name = "Cartoon";
-		    if (this.tag == 3)
-			    tag_name = "Drama";
-		    if (this.tag == 4)
-			    tag_name = "Horror";
-		    Console.WriteLine("| " + tag_name.PadLeft(11));
-            Console.Write(this.tenphim.PadLeft(14));
-            Console.Write(" " + this.gio); 
-            Console.Write(": " + this.phut);   
-            Console.Write("-- " + this.gio_end);   
-            Console.Write(": " + this.phut_end);
-            Console.Write("   Room: " + this.phong);
+        public virtual void Infor()
+        { 
+            if (this.Tag == 1)
+                this.Tag_name = "Action";
+            else if (this.Tag == 2)
+                this.Tag_name = "Cartoon";
+            else if (this.Tag == 3)
+                this.Tag_name = "Drama";
+            else if (this.Tag == 4)
+                this.Tag_name = "Horror";
+            Console.WriteLine("| ");
+            Console.Write(this.Tag_name.PadLeft(11));
+            Console.Write(this.Tenphim.PadLeft(14));
+            Console.Write(" " + this.Gio);
+            Console.Write(": " + this.Phut);
+            Console.Write("-- " + this.Gio_end);
+            Console.Write(": " + this.Phut_end);
+            Console.Write("   Room: " + this.Phong);
             Console.Write(" |");
-            Console.WriteLine(" ");     
+            Console.WriteLine(" ");
         }
 
-        public void Seat()
+        public virtual void Seat()
         {
             Console.WriteLine("-------------------------------------------------");
             Console.WriteLine("-                ==============                 -");
             Console.WriteLine("-                ==  Screen  ==                 -");
             Console.WriteLine("-                ==============                 -");
             int count = 0;
-            for(int i = 0; i < 4; i++)
+            for (int i = 0; i < 4; i++)
             {
                 Console.Write("-             ");
-                for(int j = 1; j <= 28/4; j++)
+                for (int j = 1; j <= 28 / 4; j++)
                 {
                     Console.Write("  ");
                     Console.Write(ChoNgoi[count]);
@@ -86,37 +110,37 @@ namespace OOP_CSharp
             Console.WriteLine("-------------------------------------------------");
         }
 
-        public int GetGiaVe()
+        public virtual int GetGiaVe()
         {
-            return this.giave;
+            return this.Giave;
         }
 
-        public bool CheckSeat(int i)
+        public virtual bool CheckSeat(int i)
         {
             if (ChoNgoi[i - 1] == 0)
-			    return false;
-		    return true;
+                return false;
+            return true;
         }
 
-        public int ChooseSeat()
+        public virtual int ChooseSeat()
         {
-            int i;
+
             Console.WriteLine("Choose seat: ");
-            Console.ReadLine(i);
-            while(i <= 0 || i > 28)
+            int i = Convert.ToInt32(Console.ReadLine());
+            while (i <= 0 || i > 28)
             {
                 Console.WriteLine("Invalid seat, please choose again !!!");
                 Console.Write("Choose seat: ");
-                Console.ReadLine(i);
+                i = Convert.ToInt32(Console.ReadLine());
             }
             while (ChoNgoi[i - 1] == 0)
             {
                 Console.WriteLine("Seat choosen, choose another seat !!!");
-			    Console.Write("Choose seat: ");
-			    Console.ReadLine(i);
+                Console.Write("Choose seat: ");
+                i = Convert.ToInt32(Console.ReadLine());
             }
             ChoNgoi[i - 1] = 0;
-		    return i;
+            return i;
         }
     }
 }

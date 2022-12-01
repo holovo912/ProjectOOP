@@ -14,8 +14,14 @@ namespace OOP_CSharp
 
         }
 
-        public Action(string tenphim, int gio, int gio_end, int phut, int phut_end,  List<int> ChoNgoi) : base(tenphim, gio, gio_end, phut, phut_end, ChoNgoi)
+        public Action(string tenphim, int gio, int gio_end, int phut, int phut_end,  List<int> ChoNgoi, string tag_name) : base(tenphim, gio, gio_end, phut, phut_end, ChoNgoi, tag_name)
         {
+            this.Phut = phut;
+            this.Phut_end = phut_end;
+            this.Tenphim = tenphim;
+            this.ChoNgoi = ChoNgoi;
+            this.Gio = gio;
+            this.Gio_end = gio_end;
 
         }
 
@@ -23,10 +29,10 @@ namespace OOP_CSharp
 
         public override void Input(string tenphim, int gio, int gio_end, int phut, int phut_end, List<int> ChoNgoi)
         {
-            base.Input();
-            this.giave = 80000;
-            this.tag = 1;
-            this.phong = 1;
+            base.Input(tenphim, gio, gio_end, phut, phut_end, ChoNgoi);
+            this.Giave = 80000;
+            this.Tag = 1;
+            this.Phong = 1;
         }
 
         public override bool CheckTuoi(int tuoi)

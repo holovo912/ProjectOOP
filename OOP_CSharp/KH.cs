@@ -7,10 +7,16 @@ namespace OOP_CSharp
 {
     public class KH
     {
-        protected string ten;
-        protected string ID;
-        protected int tuoi;
-        protected double giamgia;
+        private string ten;
+        private string iD;
+        private int tuoi;
+        private double giamgia;
+
+        public string Ten { get => ten; set => ten = value; }
+        public string ID { get => iD; set => iD = value; }
+        public int Tuoi { get => tuoi; set => tuoi = value; }
+        public double Giamgia { get => giamgia; set => giamgia = value; }
+
         public KH()
         {
 
@@ -29,7 +35,7 @@ namespace OOP_CSharp
         }
         public virtual double Discount()
         {
-            return this.giamgia;
+            return this.Giamgia;
         }
     }
 }
