@@ -15,7 +15,7 @@ namespace OOP_CSharp
         public static List<Phim> dsphim;
         public static List<Phim> dsphimtotal;
         public static int num_phim = num_action + num_cartoon + num_drama + num_horror;
-        public static List<VIP_KH> dsvip;
+        public static List<VIP_KH> dsvip = new List<VIP_KH>();
         public static int num_vip = 5;
         public static List<Cartoon> dscartoon;
         public static int num_cartoon = 2;

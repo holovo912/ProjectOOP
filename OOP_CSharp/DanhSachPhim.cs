@@ -32,14 +32,6 @@ namespace OOP_CSharp
             test = 1;
             Console.WriteLine("OK Phim");
         }
-        public void Show()
-        {
-            for (int i = 0; i < DsAll.Count; i++)
-            {
-                string[] cate = { "Action", "Cartoon", "Drama", "Horror" };
-                Console.WriteLine(DsAll[i].TenPhim + "   " + cate[DsAll[i].Tag - 1]);
-            }
-        }
         ~DanhSachPhim() { }
     }
 }

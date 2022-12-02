@@ -48,7 +48,7 @@ namespace OOP_CSharp
             this.Tag_name = tag_name;
         }
 
-        ~Phim() { }
+        
 
 
         public virtual void Input(string tenphim, int gio, int gio_end, int phut, int phut_end, List<int> ChoNgoi)
@@ -142,5 +142,6 @@ namespace OOP_CSharp
             ChoNgoi[i - 1] = 0;
             return i;
         }
+        ~Phim() { }
     }
 }
