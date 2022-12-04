@@ -7,27 +7,28 @@ using System.Text;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Data;
+using System.Diagnostics.Tracing;
 
 namespace OOP_CSharp
 {
     public static class Cinema
     {
-        public static List<Phim> dsphim;
-        public static List<Phim> dsphimtotal;
+        public static List<Phim> dsphim = new List<Phim>();
+        public static List<Phim> dsphimtotal = new List<Phim>();
         public static int num_phim = num_action + num_cartoon + num_drama + num_horror;
         public static List<VIP_KH> dsvip = new List<VIP_KH>();
         public static int num_vip = 5;
-        public static List<Cartoon> dscartoon;
+        public static List<Cartoon> dscartoon = new List<Cartoon>();
         public static int num_cartoon = 2;
-        public static List<Action> dsaction;
+        public static List<Action> dsaction = new List<Action>();
         public static int num_action = 2;
-        public static List<Drama> dsdrama;
+        public static List<Drama> dsdrama = new List<Drama>();
         public static int num_drama = 2;
-        public static List<Horror> dshorror;
+        public static List<Horror> dshorror = new List<Horror>();
         public static int num_horror = 2;
         public static int num_total = 0;
         public static int cost_total = 0;
-        public static List<int> seat;
+        public static List<int> seat = new List<int>();
         public static int key = 0;
         public static int key2 = 0;
         public static int nor_type = 0;
@@ -38,6 +39,7 @@ namespace OOP_CSharp
         public static KH cus = new KH();
 
         // Lấy thông tin từ file
+
         public static void LayThongTinVip(string path)
         {
             FileStream f = new FileStream(path, FileMode.OpenOrCreate);
@@ -48,13 +50,14 @@ namespace OOP_CSharp
                 VIP_KH a = new VIP_KH();
                 string iD = s.ReadLine();
                 string Ten = s.ReadLine();
-                int Tuoi = s.Read();
-                a.Input(iD, Ten, Tuoi);
+                string Tuoi = s.ReadLine();
+                a.Input(iD, Ten, Convert.ToInt32(Tuoi));
                 dsvip.Add(a);
             }
             s.Close();
             f.Close();
         }
+
 
         public static void LayThongTinAction(string path)
         {
@@ -64,17 +67,17 @@ namespace OOP_CSharp
             {
                 Action ac = new Action();
                 string tenphim = s.ReadLine();
-                int Gio = s.Read();
-                int Phut = s.Read();
-                int Gio_End = s.Read();
-                int Phut_End = s.Read();
+                string Gio = s.ReadLine();
+                string Phut = s.ReadLine();
+                string Gio_End = s.ReadLine();
+                string Phut_End = s.ReadLine();
                 List<int> CNgoi = new List<int>();
                 for (int j = 0; j < 28; j++)
                 {
-                    int tmp = s.Read();
-                    CNgoi.Add(tmp);
+                    string tmp = s.ReadLine();
+                    CNgoi.Add(Convert.ToInt32(tmp));
                 }
-                ac.Input(tenphim, Gio, Gio_End, Phut, Phut_End, CNgoi);
+                ac.Input(tenphim, Convert.ToInt32(Gio), Convert.ToInt32(Gio_End), Convert.ToInt32(Phut), Convert.ToInt32(Phut_End), CNgoi);
                 dsaction.Add(ac);
             }
             s.Close();
@@ -89,17 +92,17 @@ namespace OOP_CSharp
             {
                 Horror ho = new Horror();
                 string tenphim = s.ReadLine();
-                int Gio = s.Read();
-                int Phut = s.Read();
-                int Gio_End = s.Read();
-                int Phut_End = s.Read();
+                string Gio = s.ReadLine();
+                string Phut = s.ReadLine();
+                string Gio_End = s.ReadLine();
+                string Phut_End = s.ReadLine();
                 List<int> CNgoi = new List<int>();
                 for (int j = 0; j < 28; j++)
                 {
-                    int tmp = s.Read();
-                    CNgoi.Add(tmp);
+                    string tmp = s.ReadLine();
+                    CNgoi.Add(Convert.ToInt32(tmp));
                 }
-                ho.Input(tenphim, Gio, Gio_End, Phut, Phut_End, CNgoi);
+                ho.Input(tenphim, Convert.ToInt32(Gio), Convert.ToInt32(Gio_End), Convert.ToInt32(Phut), Convert.ToInt32(Phut_End), CNgoi);
                 dshorror.Add(ho);
             }
             s.Close();
@@ -110,21 +113,21 @@ namespace OOP_CSharp
         {
             FileStream f = new FileStream(path, FileMode.OpenOrCreate);
             StreamReader s = new StreamReader(f);
-            for (int i = 0; i < num_drama; i++)
+            for (int i = 0; i < num_action; i++)
             {
                 Drama dra = new Drama();
                 string tenphim = s.ReadLine();
-                int Gio = s.Read();
-                int Phut = s.Read();
-                int Gio_End = s.Read();
-                int Phut_End = s.Read();
+                string Gio = s.ReadLine();
+                string Phut = s.ReadLine();
+                string Gio_End = s.ReadLine();
+                string Phut_End = s.ReadLine();
                 List<int> CNgoi = new List<int>();
                 for (int j = 0; j < 28; j++)
                 {
-                    int tmp = s.Read();
-                    CNgoi.Add(tmp);
+                    string tmp = s.ReadLine();
+                    CNgoi.Add(Convert.ToInt32(tmp));
                 }
-                dra.Input(tenphim, Gio, Gio_End, Phut, Phut_End, CNgoi);
+                dra.Input(tenphim, Convert.ToInt32(Gio), Convert.ToInt32(Gio_End), Convert.ToInt32(Phut), Convert.ToInt32(Phut_End), CNgoi);
                 dsdrama.Add(dra);
             }
             s.Close();
@@ -135,21 +138,21 @@ namespace OOP_CSharp
         {
             FileStream f = new FileStream(path, FileMode.OpenOrCreate);
             StreamReader s = new StreamReader(f);
-            for (int i = 0; i < num_drama; i++)
+            for (int i = 0; i < num_action; i++)
             {
                 Cartoon ca = new Cartoon();
                 string tenphim = s.ReadLine();
-                int Gio = s.Read();
-                int Phut = s.Read();
-                int Gio_End = s.Read();
-                int Phut_End = s.Read();
+                string Gio = s.ReadLine();
+                string Phut = s.ReadLine();
+                string Gio_End = s.ReadLine();
+                string Phut_End = s.ReadLine();
                 List<int> CNgoi = new List<int>();
                 for (int j = 0; j < 28; j++)
                 {
-                    int tmp = s.Read();
-                    CNgoi.Add(tmp);
+                    string tmp = s.ReadLine();
+                    CNgoi.Add(Convert.ToInt32(tmp));
                 }
-                ca.Input(tenphim, Gio, Gio_End, Phut, Phut_End, CNgoi);
+                ca.Input(tenphim, Convert.ToInt32(Gio), Convert.ToInt32(Gio_End), Convert.ToInt32(Phut), Convert.ToInt32(Phut_End), CNgoi);
                 dscartoon.Add(ca);
             }
             s.Close();
@@ -181,7 +184,7 @@ namespace OOP_CSharp
             while (key == 0)
             {
                 Console.Write("You are Normal(1) or VIP(2) customer? (press 1 or 2): ");
-                key = Convert.ToInt32(Console.Read());
+                key = Convert.ToInt32(Console.ReadLine());
                 if (key == 1)
                 {
                     NOR_KH nor = new NOR_KH();
@@ -201,7 +204,7 @@ namespace OOP_CSharp
                             if (dsvip[i].CheckID(idnor))
                             {
                                 Console.Clear();
-                                Console.Write("ID exist, please create another ID");
+                                Console.WriteLine("ID exist, please create another ID");
                                 checknor = true;
                             }
                         }
@@ -211,7 +214,7 @@ namespace OOP_CSharp
                         Console.Write("Enter your name: ");
                         namenor = Console.ReadLine();
                         Console.Write("Enter your age: ");
-                        age = Console.Read();
+                        age = Convert.ToInt32(Console.ReadLine());
                         nor.Input(idnor, namenor, age);
                         dis = nor.Discount();
                         nor_type = 1;
@@ -264,65 +267,65 @@ namespace OOP_CSharp
 
         public static void ShowAllPhim()
         {
-            Console.WriteLine("-------------------------------------------------------");
-            for (int i = 0; i < num_phim; i++)
+            Console.WriteLine("----------------------------------------------------------");
+            for (int i = 0; i < dsphim.Count(); i++)
             {
                 Console.Write((i + 1) + ": ");
                 dsphim[i].Infor();
             }
-            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine("----------------------------------------------------------");
         }
 
         public static void ShowAction()
         {
-            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine("----------------------------------------------------------");
             for (int i = 0; i < num_action; i++)
             {
                 Console.Write((i + 1) + ": ");
                 dsaction[i].Infor();
             }
-            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine("----------------------------------------------------------");
         }
 
         public static void ShowCartoon()
         {
-            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine("----------------------------------------------------------");
             for (int i = 0; i < num_cartoon; i++)
             {
                 Console.Write((i + 1) + ": ");
                 dscartoon[i].Infor();
             }
-            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine("----------------------------------------------------------");
         }
 
         public static void ShowHorror()
         {
-            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine("----------------------------------------------------------");
             for (int i = 0; i < num_horror; i++)
             {
                 Console.Write((i + 1) + ": ");
                 dshorror[i].Infor();
             }
-            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine("----------------------------------------------------------");
         }
 
         public static void ShowDrama()
         {
-            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine("----------------------------------------------------------");
             for (int i = 0; i < num_drama; i++)
             {
                 Console.Write((i + 1) + ": ");
                 dsdrama[i].Infor();
             }
-            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine("----------------------------------------------------------");
         }
 
         public static void RunShowPhim()
         {
             Console.WriteLine("|0: Total | 1: Show All | 2: Show Action | 3: Show Cartoon | 4: Show Drama | 5: Show Horror |");
-            Console.WriteLine("Enter your choice: ");
-            key = Console.Read();
-            if(key == 0)
+            Console.Write("Enter your choice: ");
+            key = Convert.ToInt32(Console.ReadLine());
+            if (key == 0)
             {
                 Console.Clear();
                 for (int i = 0; i < num_total; i++)
@@ -332,14 +335,14 @@ namespace OOP_CSharp
                     dsphimtotal[i].Infor();
                     cost_total += dsphimtotal[i].GetGiaVe();
                 }
-                Console.Write("Total: " + cost_total*(1-dis) + " VND");
+                Console.Write("Total: " + cost_total * (1 - dis) + " VND");
                 return;
             }
-            else if(key == 1)
+            if (key == 1)
             {
                 ShowAllPhim();
                 Console.Write("Choose movie you want: ");
-                key2 = Console.Read();
+                key2 = Convert.ToInt32(Console.ReadLine());
                 if (dsphim[key2 - 1].CheckTuoi(age) == false)
                 {
                     Console.Clear();
@@ -358,10 +361,11 @@ namespace OOP_CSharp
                     Console.WriteLine("Choosed successfully!");
                 }
             }
-            else if (key == 2)
+            if (key == 2)
             {
                 ShowAction();
                 Console.Write("Choose movie you want: ");
+                key2 = Convert.ToInt32(Console.ReadLine());
                 if (dsphim[key2 - 1].CheckTuoi(age) == false)
                 {
                     Console.Clear();
@@ -380,10 +384,11 @@ namespace OOP_CSharp
                     Console.WriteLine("Choosed successfully!");
                 }
             }
-            else if(key == 3)
+            if (key == 3)
             {
                 ShowCartoon();
                 Console.Write("Choose movie you want: ");
+                key2 = Convert.ToInt32(Console.ReadLine());
                 if (dsphim[key2 - 1].CheckTuoi(age) == false)
                 {
                     Console.Clear();
@@ -402,10 +407,11 @@ namespace OOP_CSharp
                     Console.WriteLine("Choosed successfully!");
                 }
             }
-            else if(key == 4)
+            if (key == 4)
             {
                 ShowDrama();
                 Console.Write("Choose movie you want: ");
+                key2 = Convert.ToInt32(Console.ReadLine());
                 if (dsphim[key2 - 1].CheckTuoi(age) == false)
                 {
                     Console.Clear();
@@ -424,10 +430,11 @@ namespace OOP_CSharp
                     Console.WriteLine("Choosed successfully!");
                 }
             }
-            else if(key == 5)
+            if (key == 5)
             {
                 ShowHorror();
                 Console.Write("Choose movie you want: ");
+                key2 = Convert.ToInt32(Console.ReadLine());
                 if (dsphim[key2 - 1].CheckTuoi(age) == false)
                 {
                     Console.Clear();

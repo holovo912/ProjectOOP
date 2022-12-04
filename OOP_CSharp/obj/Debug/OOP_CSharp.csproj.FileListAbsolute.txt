@@ -27,3 +27,6 @@ C:\Users\QuangTrieu's PC\OneDrive\Documents\GitHub\ProjectOOP\ProjectOOP\OOP_CSh
 C:\Users\QuangTrieu's PC\OneDrive\Documents\GitHub\ProjectOOP\ProjectOOP\OOP_CSharp\obj\Debug\OOP_CSharp.csproj.CoreCompileInputs.cache
 C:\Users\QuangTrieu's PC\OneDrive\Documents\GitHub\ProjectOOP\ProjectOOP\OOP_CSharp\obj\Debug\OOP_CSharp.exe
 C:\Users\QuangTrieu's PC\OneDrive\Documents\GitHub\ProjectOOP\ProjectOOP\OOP_CSharp\obj\Debug\OOP_CSharp.pdb
+C:\Users\QuangTrieu's PC\OneDrive\Documents\GitHub\ProjectOOP\ProjectOOP\OOP_CSharp\bin\Debug\OOP_CSharp.exe.config
+C:\Users\QuangTrieu's PC\OneDrive\Documents\GitHub\ProjectOOP\ProjectOOP\OOP_CSharp\bin\Debug\OOP_CSharp.exe
+C:\Users\QuangTrieu's PC\OneDrive\Documents\GitHub\ProjectOOP\ProjectOOP\OOP_CSharp\bin\Debug\OOP_CSharp.pdb

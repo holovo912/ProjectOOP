@@ -76,13 +76,13 @@ namespace OOP_CSharp
                 this.Tag_name = "Drama";
             else if (this.Tag == 4)
                 this.Tag_name = "Horror";
-            Console.WriteLine("| ");
+            Console.Write("| ");
             Console.Write(this.Tag_name.PadLeft(11));
             Console.Write(this.Tenphim.PadLeft(14));
             Console.Write(" " + this.Gio);
-            Console.Write(": " + this.Phut);
-            Console.Write("-- " + this.Gio_end);
-            Console.Write(": " + this.Phut_end);
+            Console.Write(":" + this.Phut);
+            Console.Write(" -- " + this.Gio_end);
+            Console.Write(":" + this.Phut_end);
             Console.Write("   Room: " + this.Phong);
             Console.Write(" |");
             Console.WriteLine(" ");
@@ -97,15 +97,14 @@ namespace OOP_CSharp
             int count = 0;
             for (int i = 0; i < 4; i++)
             {
-                Console.Write("-             ");
+                Console.Write("     ");
                 for (int j = 1; j <= 28 / 4; j++)
                 {
                     Console.Write("  ");
-                    Console.Write(ChoNgoi[count]);
-                    Console.Write(" ");
+                    Console.Write(ChoNgoi[count] + "  ");
                     count++;
                 }
-                Console.WriteLine("             -");
+                Console.WriteLine("       ");
             }
             Console.WriteLine("-------------------------------------------------");
         }
