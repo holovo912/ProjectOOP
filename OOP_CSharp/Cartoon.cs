@@ -36,15 +36,5 @@ namespace OOP_CSharp
         {
             return true;
         }
-
-        public override void Infor()
-        {
-            base.Infor();
-        }
-
-        public override void Seat()
-        {
-            base.Seat();
-        }
     }
 }

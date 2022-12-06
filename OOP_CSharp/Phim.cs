@@ -134,7 +134,7 @@ namespace OOP_CSharp
         public virtual int ChooseSeat()
         {
 
-            Console.WriteLine("Choose seat: ");
+            Console.Write("Choose seat: ");
             int i = Convert.ToInt32(Console.ReadLine());
             while (i <= 0 || i > 28)
             {

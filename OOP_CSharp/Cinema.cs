@@ -45,15 +45,21 @@ namespace OOP_CSharp
         {
             FileStream f = new FileStream(path, FileMode.OpenOrCreate);
             StreamReader s = new StreamReader(f);
-
-            for (int i = 0; i < num_vip; i++)
+            try
             {
-                VIP_KH a = new VIP_KH();
-                string iD = s.ReadLine();
-                string Ten = s.ReadLine();
-                string Tuoi = s.ReadLine();
-                a.Input(iD, Ten, Convert.ToInt32(Tuoi));
-                dsvip.Add(a);
+                for (int i = 0; i < num_vip; i++)
+                {
+                    VIP_KH a = new VIP_KH();
+                    string iD = s.ReadLine();
+                    string Ten = s.ReadLine();
+                    string Tuoi = s.ReadLine();
+                    a.Input(iD, Ten, Convert.ToInt32(Tuoi));
+                    dsvip.Add(a);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Cannot read this file!");
             }
             s.Close();
             f.Close();
@@ -64,22 +70,29 @@ namespace OOP_CSharp
         {
             FileStream f = new FileStream(path, FileMode.OpenOrCreate);
             StreamReader s = new StreamReader(f);
-            for (int i = 0; i < num_action; i++)
+            try
             {
-                Action ac = new Action();
-                string tenphim = s.ReadLine();
-                string Gio = s.ReadLine();
-                string Phut = s.ReadLine();
-                string Gio_End = s.ReadLine();
-                string Phut_End = s.ReadLine();
-                List<int> CNgoi = new List<int>();
-                for (int j = 0; j < 28; j++)
+                for (int i = 0; i < num_action; i++)
                 {
-                    string tmp = s.ReadLine();
-                    CNgoi.Add(Convert.ToInt32(tmp));
+                    Action ac = new Action();
+                    string tenphim = s.ReadLine();
+                    string Gio = s.ReadLine();
+                    string Phut = s.ReadLine();
+                    string Gio_End = s.ReadLine();
+                    string Phut_End = s.ReadLine();
+                    List<int> CNgoi = new List<int>();
+                    for (int j = 0; j < 28; j++)
+                    {
+                        string tmp = s.ReadLine();
+                        CNgoi.Add(Convert.ToInt32(tmp));
+                    }
+                    ac.Input(tenphim, Convert.ToInt32(Gio), Convert.ToInt32(Gio_End), Convert.ToInt32(Phut), Convert.ToInt32(Phut_End), CNgoi);
+                    dsaction.Add(ac);
                 }
-                ac.Input(tenphim, Convert.ToInt32(Gio), Convert.ToInt32(Gio_End), Convert.ToInt32(Phut), Convert.ToInt32(Phut_End), CNgoi);
-                dsaction.Add(ac);
+            }
+            catch
+            {
+                Console.WriteLine("Cannot read this file!");
             }
             s.Close();
             f.Close();
@@ -89,22 +102,30 @@ namespace OOP_CSharp
         {
             FileStream f = new FileStream(path, FileMode.OpenOrCreate);
             StreamReader s = new StreamReader(f);
-            for (int i = 0; i < num_action; i++)
+            try
             {
-                Horror ho = new Horror();
-                string tenphim = s.ReadLine();
-                string Gio = s.ReadLine();
-                string Phut = s.ReadLine();
-                string Gio_End = s.ReadLine();
-                string Phut_End = s.ReadLine();
-                List<int> CNgoi = new List<int>();
-                for (int j = 0; j < 28; j++)
+                for (int i = 0; i < num_action; i++)
                 {
-                    string tmp = s.ReadLine();
-                    CNgoi.Add(Convert.ToInt32(tmp));
+                    Horror ho = new Horror();
+                    string tenphim = s.ReadLine();
+                    string Gio = s.ReadLine();
+                    string Phut = s.ReadLine();
+                    string Gio_End = s.ReadLine();
+                    string Phut_End = s.ReadLine();
+                    List<int> CNgoi = new List<int>();
+                    for (int j = 0; j < 28; j++)
+                    {
+                        string tmp = s.ReadLine();
+                        CNgoi.Add(Convert.ToInt32(tmp));
+                    }
+                    ho.Input(tenphim, Convert.ToInt32(Gio), Convert.ToInt32(Gio_End), Convert.ToInt32(Phut), Convert.ToInt32(Phut_End), CNgoi);
+                    dshorror.Add(ho);
                 }
-                ho.Input(tenphim, Convert.ToInt32(Gio), Convert.ToInt32(Gio_End), Convert.ToInt32(Phut), Convert.ToInt32(Phut_End), CNgoi);
-                dshorror.Add(ho);
+            }
+            catch
+            {
+                Console.WriteLine("Cannot read this file!");
+
             }
             s.Close();
             f.Close();
@@ -114,22 +135,30 @@ namespace OOP_CSharp
         {
             FileStream f = new FileStream(path, FileMode.OpenOrCreate);
             StreamReader s = new StreamReader(f);
-            for (int i = 0; i < num_action; i++)
+            try
             {
-                Drama dra = new Drama();
-                string tenphim = s.ReadLine();
-                string Gio = s.ReadLine();
-                string Phut = s.ReadLine();
-                string Gio_End = s.ReadLine();
-                string Phut_End = s.ReadLine();
-                List<int> CNgoi = new List<int>();
-                for (int j = 0; j < 28; j++)
+                for (int i = 0; i < num_action; i++)
                 {
-                    string tmp = s.ReadLine();
-                    CNgoi.Add(Convert.ToInt32(tmp));
+                    Drama dra = new Drama();
+                    string tenphim = s.ReadLine();
+                    string Gio = s.ReadLine();
+                    string Phut = s.ReadLine();
+                    string Gio_End = s.ReadLine();
+                    string Phut_End = s.ReadLine();
+                    List<int> CNgoi = new List<int>();
+                    for (int j = 0; j < 28; j++)
+                    {
+                        string tmp = s.ReadLine();
+                        CNgoi.Add(Convert.ToInt32(tmp));
+                    }
+                    dra.Input(tenphim, Convert.ToInt32(Gio), Convert.ToInt32(Gio_End), Convert.ToInt32(Phut), Convert.ToInt32(Phut_End), CNgoi);
+                    dsdrama.Add(dra);
                 }
-                dra.Input(tenphim, Convert.ToInt32(Gio), Convert.ToInt32(Gio_End), Convert.ToInt32(Phut), Convert.ToInt32(Phut_End), CNgoi);
-                dsdrama.Add(dra);
+            }
+            catch
+            {
+                Console.WriteLine("Cannot read this file!");
+
             }
             s.Close();
             f.Close();
@@ -139,22 +168,30 @@ namespace OOP_CSharp
         {
             FileStream f = new FileStream(path, FileMode.OpenOrCreate);
             StreamReader s = new StreamReader(f);
-            for (int i = 0; i < num_action; i++)
+            try
             {
-                Cartoon ca = new Cartoon();
-                string tenphim = s.ReadLine();
-                string Gio = s.ReadLine();
-                string Phut = s.ReadLine();
-                string Gio_End = s.ReadLine();
-                string Phut_End = s.ReadLine();
-                List<int> CNgoi = new List<int>();
-                for (int j = 0; j < 28; j++)
+                for (int i = 0; i < num_action; i++)
                 {
-                    string tmp = s.ReadLine();
-                    CNgoi.Add(Convert.ToInt32(tmp));
+                    Cartoon ca = new Cartoon();
+                    string tenphim = s.ReadLine();
+                    string Gio = s.ReadLine();
+                    string Phut = s.ReadLine();
+                    string Gio_End = s.ReadLine();
+                    string Phut_End = s.ReadLine();
+                    List<int> CNgoi = new List<int>();
+                    for (int j = 0; j < 28; j++)
+                    {
+                        string tmp = s.ReadLine();
+                        CNgoi.Add(Convert.ToInt32(tmp));
+                    }
+                    ca.Input(tenphim, Convert.ToInt32(Gio), Convert.ToInt32(Gio_End), Convert.ToInt32(Phut), Convert.ToInt32(Phut_End), CNgoi);
+                    dscartoon.Add(ca);
                 }
-                ca.Input(tenphim, Convert.ToInt32(Gio), Convert.ToInt32(Gio_End), Convert.ToInt32(Phut), Convert.ToInt32(Phut_End), CNgoi);
-                dscartoon.Add(ca);
+            }
+            catch
+            {
+                Console.WriteLine("Cannot read this file!");
+
             }
             s.Close();
             f.Close();
@@ -189,6 +226,13 @@ namespace OOP_CSharp
             {
                 Console.Write("You are Normal(1) or VIP(2) customer? (press 1 or 2): ");
                 key = Convert.ToInt32(Console.ReadLine());
+                while(key > 2 || key < 0)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Wrong, please press again!");
+                    Console.Write("You are Normal(1) or VIP(2) customer? (press 1 or 2): ");
+                    key = Convert.ToInt32(Console.ReadLine());
+                }
                 if (key == 1)
                 {
                     NOR_KH nor = new NOR_KH();
@@ -271,8 +315,7 @@ namespace OOP_CSharp
 
         public static void ShowAllPhim()
         {
-            Console.WriteLine("-------------------------------------------------------------");
-
+            PrintTag();
             for (int i = 0; i < dsphim.Count(); i++)
             {
                 Console.Write("|  " + Convert.ToString(i + 1).PadLeft(2) + "  ");
@@ -284,7 +327,7 @@ namespace OOP_CSharp
 
         public static void ShowAction()
         {
-            Console.WriteLine("-------------------------------------------------------------");
+            PrintTag();
 
             for (int i = 0; i < num_action; i++)
             {
@@ -298,7 +341,8 @@ namespace OOP_CSharp
 
         public static void ShowCartoon()
         {
-            Console.WriteLine("-------------------------------------------------------------");
+            PrintTag();
+
 
             for (int i = 0; i < num_cartoon; i++)
             {
@@ -312,7 +356,8 @@ namespace OOP_CSharp
 
         public static void ShowHorror()
         {
-            Console.WriteLine("-------------------------------------------------------------");
+            PrintTag();
+
 
             for (int i = 0; i < num_horror; i++)
             {
@@ -326,7 +371,8 @@ namespace OOP_CSharp
 
         public static void ShowDrama()
         {
-            Console.WriteLine("-------------------------------------------------------------");
+            PrintTag();
+
             for (int i = 0; i < num_drama; i++)
             {
                 Console.Write("|  " + Convert.ToString(i + 1).PadLeft(2) + "  ");
@@ -335,12 +381,19 @@ namespace OOP_CSharp
             }
             Console.WriteLine("-------------------------------------------------------------");
         }
-        public static void PrintTag()
+        public static void PrintRunToTal()
         {
             Console.WriteLine("---------------------------------------------------------------------");
             Console.WriteLine("| Num  |  Seat  |   Tag   |      Name       |     Time     |  Room  |");
             Console.WriteLine("---------------------------------------------------------------------");
 
+        }
+
+        public static void PrintTag()
+        {
+            Console.WriteLine("------------------------------------------------------------");
+            Console.WriteLine("| Num  |   Tag   |      Name       |     Time     |  Room  |");
+            Console.WriteLine("------------------------------------------------------------");
         }
 
         public static void ShowByTime(int gio, int phut)
@@ -378,7 +431,7 @@ namespace OOP_CSharp
         {
             Console.Clear();
             cost_total = 0;
-            PrintTag();
+            PrintRunToTal();
             for (int i = 0; i < dsphimtotal.Count(); i++)
             {
                 string tmp = "(" + Convert.ToString(seat[i]) + ")";
@@ -423,7 +476,7 @@ namespace OOP_CSharp
                         Console.Write("|  " + Convert.ToString(key2).PadLeft(2) + "  ");
                         dsphim[key2 - 1].Infor();
                         Console.WriteLine("-------------------------------------------------------------");
-                        Console.WriteLine("How many seats you want to pick?: ");
+                        Console.Write("How many seats you want to pick?: ");
                         int seats;
                         seats = Convert.ToInt32(Console.ReadLine());
                         for (int i = 0; i < seats; i++)
@@ -460,7 +513,7 @@ namespace OOP_CSharp
                         Console.Write("|  " + Convert.ToString(key2).PadLeft(2) + "  ");
                         dsphim[key2 - 1].Infor();
                         Console.WriteLine("-------------------------------------------------------------");
-                        Console.WriteLine("How many seats you want to pick?: ");
+                        Console.Write("How many seats you want to pick?: ");
                         int seats;
                         seats = Convert.ToInt32(Console.ReadLine());
                         for (int i = 0; i < seats; i++)
@@ -497,7 +550,7 @@ namespace OOP_CSharp
                         Console.Write("|  " + Convert.ToString(key2).PadLeft(2) + "  ");
                         dsphim[key2 - 1].Infor();
                         Console.WriteLine("-------------------------------------------------------------");
-                        Console.WriteLine("How many seats you want to pick?: ");
+                        Console.Write("How many seats you want to pick?: ");
                         int seats;
                         seats = Convert.ToInt32(Console.ReadLine());
                         for (int i = 0; i < seats; i++)
@@ -534,7 +587,7 @@ namespace OOP_CSharp
                         Console.Write("|  " + Convert.ToString(key2).PadLeft(2) + "  ");
                         dsphim[key2 - 1].Infor();
                         Console.WriteLine("-------------------------------------------------------------");
-                        Console.WriteLine("How many seats you want to pick?: ");
+                        Console.Write("How many seats you want to pick?: ");
                         int seats;
                         seats = Convert.ToInt32(Console.ReadLine());
                         for (int i = 0; i < seats; i++)
@@ -571,7 +624,7 @@ namespace OOP_CSharp
                         Console.Write("|  " + Convert.ToString(key2).PadLeft(2) + "  ");
                         dsphim[key2 - 1].Infor();
                         Console.WriteLine("-------------------------------------------------------------");
-                        Console.WriteLine("How many seats you want to pick?: ");
+                        Console.Write("How many seats you want to pick?: ");
                         int seats;
                         seats = Convert.ToInt32(Console.ReadLine());
                         for (int i = 0; i < seats; i++)
@@ -632,7 +685,7 @@ namespace OOP_CSharp
                         Console.Write("|  " + Convert.ToString(key2).PadLeft(2) + "  ");
                         dsphim[key2 - 1].Infor();
                         Console.WriteLine("-------------------------------------------------------------");
-                        Console.WriteLine("How many seats you want to pick?: ");
+                        Console.Write("How many seats you want to pick?: ");
                         int seats;
                         seats = Convert.ToInt32(Console.ReadLine());
                         for (int i = 0; i < seats; i++)
@@ -650,7 +703,6 @@ namespace OOP_CSharp
                 if (key == 7)
                 {
                     Console.Clear();
-                    PrintTag();
                     cost_total = 0;
                     for (int i = 0; i < dsphimtotal.Count(); i++)
                     {
@@ -661,7 +713,7 @@ namespace OOP_CSharp
                     }
                     Console.WriteLine("---------------------------------------------------------------------");
                     Console.WriteLine("Total: " + cost_total * (1 - dis) + " VND");
-                    Console.WriteLine("Choose movie you want to delete (0: return): ");
+                    Console.Write("Choose movie you want to delete (0: return): ");
                     key2 = Convert.ToInt32(Console.ReadLine());
                     if (key2 == 0 || key2 > dsphimtotal.Count())
                     {
