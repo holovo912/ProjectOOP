@@ -8,6 +8,7 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using System.Data;
 using System.Diagnostics.Tracing;
+using System.CodeDom;
 
 namespace OOP_CSharp
 {
@@ -320,137 +321,172 @@ namespace OOP_CSharp
             Console.WriteLine("----------------------------------------------------------");
         }
 
+        public static void DeletePhim(int pos)
+        {
+            for (int i = 0; i < dsphimtotal.Count(); i++)
+            {
+                dsphimtotal.RemoveAt(pos - 1);
+            }
+            num_total--;
+        }
+
         public static void RunShowPhim()
         {
-            Console.WriteLine("|0: Total | 1: Show All | 2: Show Action | 3: Show Cartoon | 4: Show Drama | 5: Show Horror |");
-            Console.Write("Enter your choice: ");
-            key = Convert.ToInt32(Console.ReadLine());
-            if (key == 0)
+            while (true)
             {
-                Console.Clear();
-                for (int i = 0; i < num_total; i++)
-                {
-                    string tmp = "| Seat(" + Convert.ToString(seat[i]) + ")";
-                    Console.Write("|" + (i + 1) + ": " + tmp.PadLeft(11));
-                    dsphimtotal[i].Infor();
-                    cost_total += dsphimtotal[i].GetGiaVe();
-                }
-                Console.Write("Total: " + cost_total * (1 - dis) + " VND");
-                return;
-            }
-            if (key == 1)
-            {
-                ShowAllPhim();
-                Console.Write("Choose movie you want: ");
-                key2 = Convert.ToInt32(Console.ReadLine());
-                if (dsphim[key2 - 1].CheckTuoi(age) == false)
+                Console.WriteLine("|0: Total | 1: Show All | 2: Show Action | 3: Show Cartoon | 4: Show Drama | 5: Show Horror |");
+                Console.WriteLine("|6: Edit  |");
+                Console.Write("Enter your choice: ");
+                key = Convert.ToInt32(Console.ReadLine());
+
+
+                if (key == 0)
                 {
                     Console.Clear();
-                    Console.WriteLine("The movie is resticted for your age, choose another movie");
-                    cus.Info();
+                    for (int i = 0; i < num_total; i++)
+                    {
+                        string tmp = "| Seat(" + Convert.ToString(seat[i]) + ")";
+                        Console.Write("|" + (i + 1) + ": " + tmp.PadLeft(11));
+                        dsphimtotal[i].Infor();
+                        cost_total += dsphimtotal[i].GetGiaVe();
+                    }
+                    Console.WriteLine("Total: " + cost_total * (1 - dis) + " VND");
+                    Console.WriteLine("-----------------------------------------");
                 }
-                else
+                if (key == 1)
                 {
-                    dsphim[key2 - 1].Infor();
-                    dsphim[key2 - 1].Seat();
-                    int temp = dsphim[key2 - 1].ChooseSeat();
-                    seat.Add(temp);
-                    dsphimtotal.Add(dsphim[key2 - 1]);
-                    num_total++;
-                    Console.Clear();
-                    Console.WriteLine("Choosed successfully!");
+                    ShowAllPhim();
+                    Console.Write("Choose movie you want: ");
+                    key2 = Convert.ToInt32(Console.ReadLine());
+                    if (dsphim[key2 - 1].CheckTuoi(age) == false)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("The movie is resticted for your age, choose another movie");
+                        cus.Info();
+                    }
+                    else
+                    {
+                        dsphim[key2 - 1].Infor();
+                        dsphim[key2 - 1].Seat();
+                        int temp = dsphim[key2 - 1].ChooseSeat();
+                        seat.Add(temp);
+                        dsphimtotal.Add(dsphim[key2 - 1]);
+                        num_total++;
+                        Console.Clear();
+                        Console.WriteLine("Choosed successfully!");
+                    }
                 }
-            }
-            if (key == 2)
-            {
-                ShowAction();
-                Console.Write("Choose movie you want: ");
-                key2 = Convert.ToInt32(Console.ReadLine());
-                if (dsphim[key2 - 1].CheckTuoi(age) == false)
+                if (key == 2)
                 {
-                    Console.Clear();
-                    Console.WriteLine("The movie is resticted for your age, choose another movie");
-                    cus.Info();
+                    ShowAction();
+                    Console.Write("Choose movie you want: ");
+                    key2 = Convert.ToInt32(Console.ReadLine());
+                    if (dsphim[key2 - 1].CheckTuoi(age) == false)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("The movie is resticted for your age, choose another movie");
+                        cus.Info();
+                    }
+                    else
+                    {
+                        dsphim[key2 - 1].Infor();
+                        dsphim[key2 - 1].Seat();
+                        int temp = dsphim[key2 - 1].ChooseSeat();
+                        seat.Add(temp);
+                        dsphimtotal.Add(dsphim[key2 - 1]);
+                        num_total++;
+                        Console.Clear();
+                        Console.WriteLine("Choosed successfully!");
+                    }
                 }
-                else
+                if (key == 3)
                 {
-                    dsphim[key2 - 1].Infor();
-                    dsphim[key2 - 1].Seat();
-                    int temp = dsphim[key2 - 1].ChooseSeat();
-                    seat.Add(temp);
-                    dsphimtotal.Add(dsphim[key2 - 1]);
-                    num_total++;
-                    Console.Clear();
-                    Console.WriteLine("Choosed successfully!");
+                    ShowCartoon();
+                    Console.Write("Choose movie you want: ");
+                    key2 = Convert.ToInt32(Console.ReadLine());
+                    if (dsphim[key2 - 1].CheckTuoi(age) == false)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("The movie is resticted for your age, choose another movie");
+                        cus.Info();
+                    }
+                    else
+                    {
+                        dsphim[key2 - 1].Infor();
+                        dsphim[key2 - 1].Seat();
+                        int temp = dsphim[key2 - 1].ChooseSeat();
+                        seat.Add(temp);
+                        dsphimtotal.Add(dsphim[key2 - 1]);
+                        num_total++;
+                        Console.Clear();
+                        Console.WriteLine("Choosed successfully!");
+                    }
                 }
-            }
-            if (key == 3)
-            {
-                ShowCartoon();
-                Console.Write("Choose movie you want: ");
-                key2 = Convert.ToInt32(Console.ReadLine());
-                if (dsphim[key2 - 1].CheckTuoi(age) == false)
+                if (key == 4)
                 {
-                    Console.Clear();
-                    Console.WriteLine("The movie is resticted for your age, choose another movie");
-                    cus.Info();
+                    ShowDrama();
+                    Console.Write("Choose movie you want: ");
+                    key2 = Convert.ToInt32(Console.ReadLine());
+                    if (dsphim[key2 - 1].CheckTuoi(age) == false)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("The movie is resticted for your age, choose another movie");
+                        cus.Info();
+                    }
+                    else
+                    {
+                        dsphim[key2 - 1].Infor();
+                        dsphim[key2 - 1].Seat();
+                        int temp = dsphim[key2 - 1].ChooseSeat();
+                        seat.Add(temp);
+                        dsphimtotal.Add(dsphim[key2 - 1]);
+                        num_total++;
+                        Console.Clear();
+                        Console.WriteLine("Choosed successfully!");
+                    }
                 }
-                else
+                if (key == 5)
                 {
-                    dsphim[key2 - 1].Infor();
-                    dsphim[key2 - 1].Seat();
-                    int temp = dsphim[key2 - 1].ChooseSeat();
-                    seat.Add(temp);
-                    dsphimtotal.Add(dsphim[key2 - 1]);
-                    num_total++;
-                    Console.Clear();
-                    Console.WriteLine("Choosed successfully!");
+                    ShowHorror();
+                    Console.Write("Choose movie you want: ");
+                    key2 = Convert.ToInt32(Console.ReadLine());
+                    if (dsphim[key2 - 1].CheckTuoi(age) == false)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("The movie is resticted for your age, choose another movie");
+                        cus.Info();
+                    }
+                    else
+                    {
+                        dsphim[key2 - 1].Infor();
+                        dsphim[key2 - 1].Seat();
+                        int temp = dsphim[key2 - 1].ChooseSeat();
+                        seat.Add(temp);
+                        dsphimtotal.Add(dsphim[key2 - 1]);
+                        num_total++;
+                        Console.Clear();
+                        Console.WriteLine("Choosed successfully!");
+                    }
                 }
-            }
-            if (key == 4)
-            {
-                ShowDrama();
-                Console.Write("Choose movie you want: ");
-                key2 = Convert.ToInt32(Console.ReadLine());
-                if (dsphim[key2 - 1].CheckTuoi(age) == false)
+                if (key == 6)
                 {
-                    Console.Clear();
-                    Console.WriteLine("The movie is resticted for your age, choose another movie");
-                    cus.Info();
-                }
-                else
-                {
-                    dsphim[key2 - 1].Infor();
-                    dsphim[key2 - 1].Seat();
-                    int temp = dsphim[key2 - 1].ChooseSeat();
-                    seat.Add(temp);
-                    dsphimtotal.Add(dsphim[key2 - 1]);
-                    num_total++;
-                    Console.Clear();
-                    Console.WriteLine("Choosed successfully!");
-                }
-            }
-            if (key == 5)
-            {
-                ShowHorror();
-                Console.Write("Choose movie you want: ");
-                key2 = Convert.ToInt32(Console.ReadLine());
-                if (dsphim[key2 - 1].CheckTuoi(age) == false)
-                {
-                    Console.Clear();
-                    Console.WriteLine("The movie is resticted for your age, choose another movie");
-                    cus.Info();
-                }
-                else
-                {
-                    dsphim[key2 - 1].Infor();
-                    dsphim[key2 - 1].Seat();
-                    int temp = dsphim[key2 - 1].ChooseSeat();
-                    seat.Add(temp);
-                    dsphimtotal.Add(dsphim[key2 - 1]);
-                    num_total++;
-                    Console.Clear();
-                    Console.WriteLine("Choosed successfully!");
+                    if (num_total == 0)
+                    {
+                        Console.WriteLine("Not exits at least one film to delete! ");
+                    }
+                    else
+                    {
+                        for (int i = 0; i < dsphimtotal.Count; i++)
+                        {
+                            Console.WriteLine("----------------------------------------------------------");
+                            dsphimtotal[i].Infor();
+                        }
+                        Console.WriteLine("Choose film you want to delete: ");
+                        int pos = Convert.ToInt32(Console.ReadLine());
+                        DeletePhim(pos);
+                        Console.Clear();
+                        Console.WriteLine("Deleted successfully!");
+                    }
                 }
             }
         }
