@@ -15,11 +15,6 @@ namespace OOP_CSharp
             this.Tuoi = tuoi;
             this.Giamgia = 0.1;
         }
-
-        public override double Discount()
-        {
-            return Giamgia;
-        }
         ~NOR_KH() { }
     }
 }

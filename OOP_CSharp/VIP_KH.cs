@@ -23,11 +23,6 @@ namespace OOP_CSharp
             return false;
         }
 
-        public override double Discount()
-        {
-            return Giamgia;
-        }
-
         ~VIP_KH() { }
     }
 }
