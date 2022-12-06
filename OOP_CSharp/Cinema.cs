@@ -57,9 +57,10 @@ namespace OOP_CSharp
                     dsvip.Add(a);
                 }
             }
-            catch
+            catch (Exception e)
             {
-                Console.WriteLine("Cannot read this file!");
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(e.Message);
             }
             s.Close();
             f.Close();
@@ -90,9 +91,10 @@ namespace OOP_CSharp
                     dsaction.Add(ac);
                 }
             }
-            catch
+            catch (Exception e)
             {
-                Console.WriteLine("Cannot read this file!");
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(e.Message);
             }
             s.Close();
             f.Close();
@@ -122,10 +124,10 @@ namespace OOP_CSharp
                     dshorror.Add(ho);
                 }
             }
-            catch
+            catch (Exception e)
             {
-                Console.WriteLine("Cannot read this file!");
-
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(e.Message);
             }
             s.Close();
             f.Close();
@@ -155,10 +157,10 @@ namespace OOP_CSharp
                     dsdrama.Add(dra);
                 }
             }
-            catch
+            catch (Exception e)
             {
-                Console.WriteLine("Cannot read this file!");
-
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(e.Message);
             }
             s.Close();
             f.Close();
@@ -188,10 +190,10 @@ namespace OOP_CSharp
                     dscartoon.Add(ca);
                 }
             }
-            catch
+            catch (Exception e)
             {
-                Console.WriteLine("Cannot read this file!");
-
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(e.Message);
             }
             s.Close();
             f.Close();
