@@ -34,8 +34,6 @@ namespace OOP_CSharp
 
         public override bool CheckTuoi(int tuoi)
         {
-            if (tuoi < 16)
-                return false;
             return true;
         }
 

@@ -48,9 +48,6 @@ namespace OOP_CSharp
             this.Tag_name = tag_name;
         }
 
-        
-
-
         public virtual void Input(string tenphim, int gio, int gio_end, int phut, int phut_end, List<int> ChoNgoi)
         {
             this.Tenphim = tenphim;
@@ -76,18 +73,31 @@ namespace OOP_CSharp
                 this.Tag_name = "Drama";
             else if (this.Tag == 4)
                 this.Tag_name = "Horror";
-            Console.Write("| ");
-            Console.Write(this.Tag_name.PadLeft(11));
-            Console.Write(this.Tenphim.PadLeft(14));
-            Console.Write(" " + this.Gio);
-            Console.Write(":" + this.Phut);
-            Console.Write(" -- " + this.Gio_end);
-            Console.Write(":" + this.Phut_end);
-            Console.Write("   Room: " + this.Phong);
-            Console.Write(" |");
-            Console.WriteLine(" ");
+            Console.Write("| " + this.Tag_name.PadLeft(8) + "| " + this.tenphim.PadLeft(16) + "| ");
+            string tmp = Convert.ToString(this.gio) + ":" + Convert.ToString(Phut);
+            string tmp2 = Convert.ToString(this.gio_end) + ":" + Convert.ToString(Phut_end);
+            Console.Write(tmp.PadLeft(5) + "--" + tmp2.PadRight(5));
+            Console.WriteLine(" |   " + Convert.ToString(this.Phong) + "    |");
         }
 
+        public bool CheckTime(int gio, int phut)
+        {
+            if (gio > Gio && gio < this.Gio_end)
+            {
+                return true;
+            }
+            else if (gio == this.Gio)
+            {
+                if (phut > this.Phut)
+                    return true;
+            }
+            else if (gio == this.Gio_end)
+            {
+                if (phut < this.phut_end)
+                    return true;
+            }
+            return false;
+        }
         public virtual void Seat()
         {
             Console.WriteLine("-------------------------------------------------");
@@ -140,6 +150,11 @@ namespace OOP_CSharp
             }
             ChoNgoi[i - 1] = 0;
             return i;
+        }
+
+        public void UpdateSeat(int key)
+        {
+            ChoNgoi[key - 1] = key;
         }
         ~Phim() { }
     }

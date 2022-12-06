@@ -46,7 +46,6 @@
     <Compile Include="Action.cs" />
     <Compile Include="Cartoon.cs" />
     <Compile Include="Cinema.cs" />
-    <Compile Include="DanhSachPhim.cs" />
     <Compile Include="Drama.cs" />
     <Compile Include="Horror.cs" />
     <Compile Include="KH.cs" />

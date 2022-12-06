@@ -12,6 +12,7 @@
             Cinema.LayHetPhim();
             Cinema.RunSignIn();
             Cinema.RunShowPhim();
+            Cinema.RunTotal();
         }
     }
 }
