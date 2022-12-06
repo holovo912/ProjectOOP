@@ -323,7 +323,7 @@ namespace OOP_CSharp
                 Console.Write("|  " + Convert.ToString(i + 1).PadLeft(2) + "  ");
                 dsphim[i].Infor();
             }
-            Console.WriteLine("-------------------------------------------------------------");
+            Console.WriteLine("------------------------------------------------------------");
 
         }
 
@@ -337,7 +337,7 @@ namespace OOP_CSharp
 
                 dsaction[i].Infor();
             }
-            Console.WriteLine("-------------------------------------------------------------");
+            Console.WriteLine("------------------------------------------------------------");
 
         }
 
@@ -352,7 +352,7 @@ namespace OOP_CSharp
 
                 dscartoon[i].Infor();
             }
-            Console.WriteLine("-------------------------------------------------------------");
+            Console.WriteLine("------------------------------------------------------------");
 
         }
 
@@ -367,7 +367,7 @@ namespace OOP_CSharp
 
                 dshorror[i].Infor();
             }
-            Console.WriteLine("-------------------------------------------------------------");
+            Console.WriteLine("------------------------------------------------------------");
 
         }
 
@@ -381,7 +381,7 @@ namespace OOP_CSharp
 
                 dsdrama[i].Infor();
             }
-            Console.WriteLine("-------------------------------------------------------------");
+            Console.WriteLine("------------------------------------------------------------");
         }
         public static void PrintRunToTal()
         {
@@ -474,10 +474,10 @@ namespace OOP_CSharp
                     }
                     else
                     {
-                        Console.WriteLine("-------------------------------------------------------------");
+                        Console.WriteLine("------------------------------------------------------------");
                         Console.Write("|  " + Convert.ToString(key2).PadLeft(2) + "  ");
                         dsphim[key2 - 1].Infor();
-                        Console.WriteLine("-------------------------------------------------------------");
+                        Console.WriteLine("------------------------------------------------------------");
                         Console.Write("How many seats you want to pick?: ");
                         int seats;
                         seats = Convert.ToInt32(Console.ReadLine());
@@ -511,10 +511,10 @@ namespace OOP_CSharp
                     }
                     else
                     {
-                        Console.WriteLine("-------------------------------------------------------------");
+                        Console.WriteLine("------------------------------------------------------------");
                         Console.Write("|  " + Convert.ToString(key2).PadLeft(2) + "  ");
                         dsphim[key2 - 1].Infor();
-                        Console.WriteLine("-------------------------------------------------------------");
+                        Console.WriteLine("------------------------------------------------------------");
                         Console.Write("How many seats you want to pick?: ");
                         int seats;
                         seats = Convert.ToInt32(Console.ReadLine());
@@ -548,10 +548,10 @@ namespace OOP_CSharp
                     }
                     else
                     {
-                        Console.WriteLine("-------------------------------------------------------------");
+                        Console.WriteLine("------------------------------------------------------------");
                         Console.Write("|  " + Convert.ToString(key2).PadLeft(2) + "  ");
                         dsphim[key2 - 1].Infor();
-                        Console.WriteLine("-------------------------------------------------------------");
+                        Console.WriteLine("------------------------------------------------------------");
                         Console.Write("How many seats you want to pick?: ");
                         int seats;
                         seats = Convert.ToInt32(Console.ReadLine());
@@ -585,10 +585,10 @@ namespace OOP_CSharp
                     }
                     else
                     {
-                        Console.WriteLine("-------------------------------------------------------------");
+                        Console.WriteLine("------------------------------------------------------------");
                         Console.Write("|  " + Convert.ToString(key2).PadLeft(2) + "  ");
                         dsphim[key2 - 1].Infor();
-                        Console.WriteLine("-------------------------------------------------------------");
+                        Console.WriteLine("------------------------------------------------------------");
                         Console.Write("How many seats you want to pick?: ");
                         int seats;
                         seats = Convert.ToInt32(Console.ReadLine());
@@ -622,10 +622,10 @@ namespace OOP_CSharp
                     }
                     else
                     {
-                        Console.WriteLine("-------------------------------------------------------------");
+                        Console.WriteLine("------------------------------------------------------------");
                         Console.Write("|  " + Convert.ToString(key2).PadLeft(2) + "  ");
                         dsphim[key2 - 1].Infor();
-                        Console.WriteLine("-------------------------------------------------------------");
+                        Console.WriteLine("------------------------------------------------------------");
                         Console.Write("How many seats you want to pick?: ");
                         int seats;
                         seats = Convert.ToInt32(Console.ReadLine());
@@ -683,10 +683,10 @@ namespace OOP_CSharp
                     }
                     else
                     {
-                        Console.WriteLine("-------------------------------------------------------------");
+                        Console.WriteLine("------------------------------------------------------------");
                         Console.Write("|  " + Convert.ToString(key2).PadLeft(2) + "  ");
                         dsphim[key2 - 1].Infor();
-                        Console.WriteLine("-------------------------------------------------------------");
+                        Console.WriteLine("------------------------------------------------------------");
                         Console.Write("How many seats you want to pick?: ");
                         int seats;
                         seats = Convert.ToInt32(Console.ReadLine());

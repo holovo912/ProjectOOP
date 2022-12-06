@@ -107,11 +107,10 @@ namespace OOP_CSharp
             int count = 0;
             for (int i = 0; i < 4; i++)
             {
-                Console.Write("     ");
+                Console.Write("       ");
                 for (int j = 1; j <= 28 / 4; j++)
                 {
-                    Console.Write("  ");
-                    Console.Write(ChoNgoi[count] + "  ");
+                    Console.Write(Convert.ToString(ChoNgoi[count]).PadLeft(3) + "  ");
                     count++;
                 }
                 Console.WriteLine("       ");
