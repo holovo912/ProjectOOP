@@ -20,13 +20,13 @@ namespace OOP_CSharp
         public static List<VIP_KH> dsvip = new List<VIP_KH>();
         public static int num_vip = 5;
         public static List<Cartoon> dscartoon = new List<Cartoon>();
-        public static int num_cartoon = 2;
+        public static int num_cartoon = 4;
         public static List<Action> dsaction = new List<Action>();
-        public static int num_action = 2;
+        public static int num_action = 3;
         public static List<Drama> dsdrama = new List<Drama>();
-        public static int num_drama = 2;
+        public static int num_drama = 5;
         public static List<Horror> dshorror = new List<Horror>();
-        public static int num_horror = 2;
+        public static int num_horror = 6;
         public static int num_total = 0;
         public static int cost_total = 0;
         public static List<int> seat = new List<int>();
@@ -106,7 +106,7 @@ namespace OOP_CSharp
             StreamReader s = new StreamReader(f);
             try
             {
-                for (int i = 0; i < num_action; i++)
+                for (int i = 0; i < num_horror; i++)
                 {
                     Horror ho = new Horror();
                     string tenphim = s.ReadLine();
@@ -139,7 +139,7 @@ namespace OOP_CSharp
             StreamReader s = new StreamReader(f);
             try
             {
-                for (int i = 0; i < num_action; i++)
+                for (int i = 0; i < num_drama; i++)
                 {
                     Drama dra = new Drama();
                     string tenphim = s.ReadLine();
@@ -172,7 +172,7 @@ namespace OOP_CSharp
             StreamReader s = new StreamReader(f);
             try
             {
-                for (int i = 0; i < num_action; i++)
+                for (int i = 0; i < num_cartoon; i++)
                 {
                     Cartoon ca = new Cartoon();
                     string tenphim = s.ReadLine();
@@ -205,17 +205,17 @@ namespace OOP_CSharp
             {
                 dsphim.Add(dsaction[i]);
             }
-            for (int i = 0; i < dshorror.Count(); i++)
+            for (int i = 0; i < dscartoon.Count(); i++)
             {
-                dsphim.Add(dshorror[i]);
+                dsphim.Add(dscartoon[i]);
             }
             for (int i = 0; i < dsdrama.Count(); i++)
             {
                 dsphim.Add(dsdrama[i]);
             }
-            for (int i = 0; i < dscartoon.Count(); i++)
+            for (int i = 0; i < dshorror.Count(); i++)
             {
-                dsphim.Add(dscartoon[i]);
+                dsphim.Add(dshorror[i]);
             }
         }
 
@@ -228,7 +228,7 @@ namespace OOP_CSharp
             {
                 Console.Write("You are Normal(1) or VIP(2) customer? (press 1 or 2): ");
                 key = Convert.ToInt32(Console.ReadLine());
-                while(key > 2 || key < 0)
+                while (key > 2 || key < 0)
                 {
                     Console.Clear();
                     Console.WriteLine("Wrong, please press again!");
@@ -318,6 +318,7 @@ namespace OOP_CSharp
         public static void ShowAllPhim()
         {
             PrintTag();
+            Console.WriteLine("------------------------------------------------------------");
             for (int i = 0; i < dsphim.Count(); i++)
             {
                 Console.Write("|  " + Convert.ToString(i + 1).PadLeft(2) + "  ");
@@ -330,8 +331,8 @@ namespace OOP_CSharp
         public static void ShowAction()
         {
             PrintTag();
-
-            for (int i = 0; i < num_action; i++)
+            Console.WriteLine("------------------------------------------------------------");
+            for (int i = 0; i < dsaction.Count(); i++)
             {
                 Console.Write("|  " + Convert.ToString(i + 1).PadLeft(2) + "  ");
 
@@ -344,9 +345,8 @@ namespace OOP_CSharp
         public static void ShowCartoon()
         {
             PrintTag();
-
-
-            for (int i = 0; i < num_cartoon; i++)
+            Console.WriteLine("------------------------------------------------------------");
+            for (int i = 0; i < dscartoon.Count(); i++)
             {
                 Console.Write("|  " + Convert.ToString(i + 1).PadLeft(2) + "  ");
 
@@ -359,9 +359,8 @@ namespace OOP_CSharp
         public static void ShowHorror()
         {
             PrintTag();
-
-
-            for (int i = 0; i < num_horror; i++)
+            Console.WriteLine("------------------------------------------------------------");
+            for (int i = 0; i < dshorror.Count(); i++)
             {
                 Console.Write("|  " + Convert.ToString(i + 1).PadLeft(2) + "  ");
 
@@ -374,8 +373,8 @@ namespace OOP_CSharp
         public static void ShowDrama()
         {
             PrintTag();
-
-            for (int i = 0; i < num_drama; i++)
+            Console.WriteLine("------------------------------------------------------------");
+            for (int i = 0; i < dsdrama.Count(); i++)
             {
                 Console.Write("|  " + Convert.ToString(i + 1).PadLeft(2) + "  ");
 
@@ -400,7 +399,8 @@ namespace OOP_CSharp
 
         public static void ShowByTime(int gio, int phut)
         {
-            Console.WriteLine("---------------------------------------------------------------------");
+            PrintTag();
+            Console.WriteLine("------------------------------------------------------------");
             for (int i = 0; i < dsphim.Count(); i++)
             {
                 if (dsphim[i].CheckTime(gio, phut) == true)
@@ -409,7 +409,7 @@ namespace OOP_CSharp
                     dsphim[i].Infor();
                 }
             }
-            Console.WriteLine("---------------------------------------------------------------------");
+            Console.WriteLine("------------------------------------------------------------");
 
 
         }
@@ -434,6 +434,7 @@ namespace OOP_CSharp
             Console.Clear();
             cost_total = 0;
             PrintRunToTal();
+            Console.WriteLine("---------------------------------------------------------------------");
             for (int i = 0; i < dsphimtotal.Count(); i++)
             {
                 string tmp = "(" + Convert.ToString(seat[i]) + ")";
@@ -727,6 +728,7 @@ namespace OOP_CSharp
                         num_total--;
                         dsphimtotal[key2 - 1].UpdateSeat(seat[key2 - 1]);
                         dsphimtotal.RemoveAt(key2 - 1);
+                        seat.RemoveAt(key2 - 1);
                         Console.Clear();
                         Console.WriteLine("Deleted successfully!");
                     }

@@ -25,8 +25,8 @@ namespace OOP_CSharp
         {
             base.Input(tenphim, gio, gio_end, phut, phut_end, ChoNgoi);
             this.Giave = 80000;
-            this.Tag = 3;
-            this.Phong = 3;
+            this.Tag = 4;
+            this.Phong = 4;
         }
 
         public override bool CheckTuoi(int tuoi)
