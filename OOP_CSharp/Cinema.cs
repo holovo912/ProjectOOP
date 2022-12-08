@@ -235,9 +235,10 @@ namespace OOP_CSharp
                             key = 0;
                             break;
                         }
+                        cus.InputID(idnor);
                         for (int i = 0; i < num_vip; i++)
                         {
-                            if (dsvip[i].CheckID(idnor))
+                            if (cus == dsvip[i])
                             {
                                 Console.Clear();
                                 Console.WriteLine("ID exist, please create another ID");
