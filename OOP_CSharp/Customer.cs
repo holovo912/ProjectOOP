@@ -2,7 +2,15 @@
 
 namespace OOP_CSharp
 {
-    public class Customer
+    interface IInputID
+    {
+        void InputID(string id);
+    }
+    interface IDisCount
+    {
+        double Discount();
+    }
+    public class Customer : IInputID , IDisCount
     {
         private string ten;
         private string iD;
@@ -17,9 +25,9 @@ namespace OOP_CSharp
         ~Customer() { }
         public virtual void Input(string ID, string ten, int tuoi)
         {
-            
+
         }
-        public virtual void Info()
+        public void Info()
         {
             string tmp = "|";
             Console.WriteLine("------------------------------------------");
@@ -28,7 +36,7 @@ namespace OOP_CSharp
             Console.WriteLine("|" + " Age: " + Convert.ToString(this.Tuoi).PadRight(34) + tmp);
             Console.WriteLine("|" + " Discount: " + (this.Giamgia * 100 + "%").PadRight(29) + tmp);
         }
-        public virtual double Discount()
+        public double Discount()
         {
             return this.Giamgia;
         }
@@ -40,7 +48,6 @@ namespace OOP_CSharp
         {
             if (o == null)
                 return false;
-
             return true;
         }
         public override int GetHashCode()
