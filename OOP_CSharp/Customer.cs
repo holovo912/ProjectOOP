@@ -36,5 +36,26 @@ namespace OOP_CSharp
         {
             ID = id;
         }
+        public override bool Equals(object o)
+        {
+            if (o == null)
+                return false;
+
+            return true;
+        }
+        public override int GetHashCode()
+        {
+            return 0;
+        }
+        public static bool operator ==(Customer d1, VIP_Cus d2)
+        {
+            if (d1.ID == d2.ID) return true;
+            return false;
+        }
+        public static bool operator !=(Customer d1, VIP_Cus d2)
+        {
+            if (d1.ID == d2.ID) return false;
+            return true;
+        }
     }
 }
