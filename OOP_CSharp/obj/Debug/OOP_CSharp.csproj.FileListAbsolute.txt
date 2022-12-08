@@ -30,3 +30,11 @@ C:\Users\QuangTrieu's PC\OneDrive\Documents\GitHub\ProjectOOP\ProjectOOP\OOP_CSh
 C:\Users\QuangTrieu's PC\OneDrive\Documents\GitHub\ProjectOOP\ProjectOOP\OOP_CSharp\bin\Debug\OOP_CSharp.exe.config
 C:\Users\QuangTrieu's PC\OneDrive\Documents\GitHub\ProjectOOP\ProjectOOP\OOP_CSharp\bin\Debug\OOP_CSharp.exe
 C:\Users\QuangTrieu's PC\OneDrive\Documents\GitHub\ProjectOOP\ProjectOOP\OOP_CSharp\bin\Debug\OOP_CSharp.pdb
+D:\Courses\Year2\HK1\Object-Oriented Programming\Project\C#\OOP_CSharp\bin\Debug\OOP_CSharp.exe.config
+D:\Courses\Year2\HK1\Object-Oriented Programming\Project\C#\OOP_CSharp\bin\Debug\OOP_CSharp.exe
+D:\Courses\Year2\HK1\Object-Oriented Programming\Project\C#\OOP_CSharp\bin\Debug\OOP_CSharp.pdb
+D:\Courses\Year2\HK1\Object-Oriented Programming\Project\C#\OOP_CSharp\obj\Debug\OOP_CSharp.csproj.AssemblyReference.cache
+D:\Courses\Year2\HK1\Object-Oriented Programming\Project\C#\OOP_CSharp\obj\Debug\OOP_CSharp.csproj.SuggestedBindingRedirects.cache
+D:\Courses\Year2\HK1\Object-Oriented Programming\Project\C#\OOP_CSharp\obj\Debug\OOP_CSharp.csproj.CoreCompileInputs.cache
+D:\Courses\Year2\HK1\Object-Oriented Programming\Project\C#\OOP_CSharp\obj\Debug\OOP_CSharp.exe
+D:\Courses\Year2\HK1\Object-Oriented Programming\Project\C#\OOP_CSharp\obj\Debug\OOP_CSharp.pdb

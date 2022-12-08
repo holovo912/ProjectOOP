@@ -1,10 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OOP_CSharp
 {
@@ -32,11 +27,7 @@ namespace OOP_CSharp
         public List<int> ChoNgoi { get => choNgoi; set => choNgoi = value; }
         public string Tag_name { get => tag_name; set => tag_name = value; }
 
-        public Phim()
-        {
-
-        }
-
+        public Phim() { }
         public Phim(string tenphim, int gio, int gio_end, int phut, int phut_end, List<int> choNgoi, string tag_name)
         {
             this.Tenphim = tenphim;
@@ -47,10 +38,6 @@ namespace OOP_CSharp
             this.ChoNgoi = choNgoi;
             this.Tag_name = tag_name;
         }
-
-        
-
-
         public virtual void Input(string tenphim, int gio, int gio_end, int phut, int phut_end, List<int> ChoNgoi)
         {
             this.Tenphim = tenphim;
@@ -60,13 +47,11 @@ namespace OOP_CSharp
             this.Gio_end = gio_end;
             this.ChoNgoi = ChoNgoi;
         }
-
         public virtual bool CheckTuoi(int tuoi)
         {
             return true;
         }
-
-        public virtual void Infor()
+        public void Infor()
         { 
             if (this.Tag == 1)
                 this.Tag_name = "Action";
@@ -76,55 +61,63 @@ namespace OOP_CSharp
                 this.Tag_name = "Drama";
             else if (this.Tag == 4)
                 this.Tag_name = "Horror";
-            Console.Write("| ");
-            Console.Write(this.Tag_name.PadLeft(11));
-            Console.Write(this.Tenphim.PadLeft(14));
-            Console.Write(" " + this.Gio);
-            Console.Write(":" + this.Phut);
-            Console.Write(" -- " + this.Gio_end);
-            Console.Write(":" + this.Phut_end);
-            Console.Write("   Room: " + this.Phong);
-            Console.Write(" |");
-            Console.WriteLine(" ");
+            Console.Write("| " + this.Tag_name.PadRight(7) + " | " + this.tenphim.PadRight(16) + "| ");
+            string tmp = Convert.ToString(this.gio) + ":" + Convert.ToString(Phut);
+            string tmp2 = Convert.ToString(this.gio_end) + ":" + Convert.ToString(Phut_end);
+            Console.Write(tmp.PadLeft(5) + "--" + tmp2.PadRight(5));
+            Console.WriteLine(" |   " + Convert.ToString(this.Phong) + "    |");
         }
-
-        public virtual void Seat()
+        public bool CheckTime(int gio, int phut)
         {
-            Console.WriteLine("-------------------------------------------------");
-            Console.WriteLine("-                ==============                 -");
-            Console.WriteLine("-                ==  Screen  ==                 -");
-            Console.WriteLine("-                ==============                 -");
+            if (gio > Gio && gio < this.Gio_end)
+            {
+                return true;
+            }
+            else if (gio == this.Gio)
+            {
+                if (phut > this.Phut)
+                    return true;
+            }
+            else if (gio == this.Gio_end)
+            {
+                if (phut < this.phut_end)
+                    return true;
+            }
+            return false;
+        }
+        public void Seat()
+        {
+            Console.WriteLine("------------------------------------------------------------");
+            Console.WriteLine("     |                ==============                 |");
+            Console.WriteLine("     |                ==  Screen  ==                 |");
+            Console.WriteLine("     |                ==============                 |\n");
             int count = 0;
             for (int i = 0; i < 4; i++)
             {
-                Console.Write("     ");
+                Console.Write("     |             ");
                 for (int j = 1; j <= 28 / 4; j++)
                 {
-                    Console.Write("  ");
-                    Console.Write(ChoNgoi[count] + "  ");
+                    Console.Write(Convert.ToString(ChoNgoi[count]).PadLeft(2) + " ");
                     count++;
                 }
-                Console.WriteLine("       ");
+                Console.WriteLine("             |");
             }
-            Console.WriteLine("-------------------------------------------------");
+            Console.WriteLine("------------------------------------------------------------");
         }
-
-        public virtual int GetGiaVe()
+        public int GetGiaVe()
         {
             return this.Giave;
         }
-
-        public virtual bool CheckSeat(int i)
+        public bool CheckSeat(int i)
         {
             if (ChoNgoi[i - 1] == 0)
                 return false;
             return true;
         }
-
-        public virtual int ChooseSeat()
+        public int ChooseSeat()
         {
 
-            Console.WriteLine("Choose seat: ");
+            Console.Write("Choose seat: ");
             int i = Convert.ToInt32(Console.ReadLine());
             while (i <= 0 || i > 28)
             {
@@ -140,6 +133,10 @@ namespace OOP_CSharp
             }
             ChoNgoi[i - 1] = 0;
             return i;
+        }
+        public void UpdateSeat(int key)
+        {
+            ChoNgoi[key - 1] = key;
         }
         ~Phim() { }
     }

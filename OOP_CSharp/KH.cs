@@ -29,9 +29,14 @@ namespace OOP_CSharp
             
         }
 
-        public virtual void Info()
+        public void Info()
         {
-
+            Console.WriteLine("-----------------------------------------------------------------------------------");
+            Console.WriteLine("ID: " + this.ID);
+            Console.WriteLine("Name: " + this.Ten);
+            Console.WriteLine("Age: " + this.Tuoi);
+            Console.WriteLine("Discount: " + this.Giamgia * 100 + "%");
+            Console.WriteLine("-----------------------------------------------------------------------------------");
         }
         public virtual double Discount()
         {

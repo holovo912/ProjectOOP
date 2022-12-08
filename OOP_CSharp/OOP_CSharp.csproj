@@ -46,15 +46,14 @@
     <Compile Include="Action.cs" />
     <Compile Include="Cartoon.cs" />
     <Compile Include="Cinema.cs" />
-    <Compile Include="DanhSachPhim.cs" />
     <Compile Include="Drama.cs" />
     <Compile Include="Horror.cs" />
-    <Compile Include="KH.cs" />
-    <Compile Include="NOR_KH.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="NOR_Cus.cs" />
     <Compile Include="Phim.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VIP_KH.cs" />
+    <Compile Include="VIP_Cus.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
